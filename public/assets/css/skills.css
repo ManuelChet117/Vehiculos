@@ -1,0 +1,191 @@
+/* Estilos generales */
+.skills {
+    background-color: #000000;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.skills .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2 {
+    font-size: 48px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.skills .fila {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills .fila .col {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 25px;
+}
+
+.skills .skill > span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las barras de progreso */
+.skills .skill .barra-skill {
+    height: 30px;
+    width: 100%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.skills .skill .progreso {
+    background-color: #1CB698;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 2s ease;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Animaciones individuales para cada habilidad */
+.skills .skill .javascript {
+    width: 0%;
+    animation: javascript 2s forwards;
+}
+@keyframes javascript {
+    0% { width: 0%; }
+    100% { width: 30%; }
+}
+
+.skills .skill .htmlcss {
+    width: 0%;
+    animation: htmlcss 2s forwards;
+}
+@keyframes htmlcss {
+    0% { width: 0%; }
+    100% { width: 40%; }
+}
+
+.skills .skill .java {
+    width: 0%;
+    animation: java 2s forwards;
+}
+@keyframes java {
+    0% { width: 0%; }
+    100% { width: 50%; }
+}
+
+.skills .skill .sqlserver {
+    width: 0%;
+    animation: sqlserver 2s forwards;
+}
+@keyframes sqlserver {
+    0% { width: 0%; }
+    100% { width: 50%; }
+}
+
+.skills .skill .comunicacion {
+    width: 0%;
+    animation: comunicacion 2s forwards;
+}
+@keyframes comunicacion {
+    0% { width: 0%; }
+    100% { width: 60%; }
+}
+
+.skills .skill .trabajo {
+    width: 0%;
+    animation: trabajo 2s forwards;
+}
+@keyframes trabajo {
+    0% { width: 0%; }
+    100% { width: 70%; }
+}
+
+.skills .skill .creatividad {
+    width: 0%;
+    animation: creatividad 2s forwards;
+}
+@keyframes creatividad {
+    0% { width: 0%; }
+    100% { width: 75%; }
+}
+
+.skills .skill .dedicacion {
+    width: 0%;
+    animation: dedicacion 2s forwards;
+}
+@keyframes dedicacion {
+    0% { width: 0%; }
+    100% { width: 70%; }
+}
+
+.skills .skill .aprender {
+    width: 0%;
+    animation: aprender 2s forwards;
+}
+@keyframes aprender {
+    0% { width: 0%; }
+    100% { width: 50%; }
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .skills h2 {
+        font-size: 36px;
+    }
+
+    .skills .fila .col {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .skills .fila .col h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .skills .skill .barra-skill {
+        height: 25px;
+    }
+
+    .skills .skill > span {
+        font-size: 14px;
+    }
+}
+
+/* Ajustes para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    .skills h2 {
+        font-size: 28px;
+    }
+
+    .skills .fila .col h3 {
+        font-size: 20px;
+    }
+
+    .skills .skill .barra-skill {
+        height: 20px;
+    }
+
+    .skills .skill > span {
+        font-size: 12px;
+    }
+}

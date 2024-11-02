@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/* MENU */
+.contenedor-header{
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    border-bottom: 1px dotted #a9a5a5;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.contenedor-header header .logo a {
+    font-family: 'Press Start 2P', cursive; /* Cambiar a la fuente de 8 bits */
+    font-size: 20px;
+    color: #1CB698; /* Color del texto */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Añadir transición suave para el hover */
+}
+
+.contenedor-header header .logo a:hover {
+    color: #FFA500; /* Cambiar el color al pasar el cursor */
+}
+
+
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.nav-responsive{
+    background-color: #1CB698;
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/* SECCION I N I C I O */
+.inicio{
+    background: #000000,
+    url(image/fondo1.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center; /* Agrupa los elementos alrededor del centro */
+}
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenido-banner .redes a:hover{
+    background-color: #1CB698;
+}
+.contacto {
+    background-color: #000000; /* Fondo claro */
+    color: #1CB698; /* Color del texto */
+    padding: 50px 20px; /* Espaciado interno */
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px; /* Ancho máximo */
+    margin: auto; /* Centrar la sección */
+}
+
+.contacto h2 {
+    font-size: 48px; /* Tamaño del título */
+    font-family: 'Press Start 2P', cursive; /* Tipografía */
+    text-align: center; /* Centrar texto */
+    margin-bottom: 40px; /* Espaciado inferior */
+}
+
+.contacto .fila {
+    display: flex; /* Disposición en flexbox */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.contacto .col {
+    flex: 1; /* Permitir que las columnas se expandan */
+    min-width: 300px; /* Ancho mínimo para dispositivos pequeños */
+}
+
+.contacto .formulario input,
+.contacto .formulario textarea {
+    width: 100%; /* Ancho completo */
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado inferior */
+    background-color: #000000; /* Fondo negro */
+    border: 2px solid #1CB698; /* Borde del color definido */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #1CB698; /* Color del texto */
+    transition: border-color 0.3s; /* Transición para el borde */
+}
+
+.contacto .formulario input:focus,
+.contacto .formulario textarea:focus {
+    border-color: #16a67c; /* Cambio de color del borde al enfocar */
+    outline: none; /* Eliminar el contorno por defecto */
+}
+
+.contacto .btn-enviar {
+    background-color: #1CB698; /* Color del botón */
+    color: #fff; /* Color del texto */
+    padding: 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones para el fondo y transformación */
+    display: inline-block; /* Alinear el botón */
+}
+
+.contacto .btn-enviar:hover {
+    background-color: #169f7e; /* Color al pasar el cursor */
+    transform: translateY(-3px); /* Levantar el botón al pasar el cursor */
+}
+
+.contacto .informacion {
+    display: flex; /* Flexbox para la información */
+    flex-direction: column; /* Colocar en columna */
+    gap: 15px; /* Espacio entre los elementos */
+}
+
+.contacto .informacion ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+}
+
+.contacto .informacion li {
+    display: flex; /* Flex para icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s; /* Transición para el color */
+}
+
+.contacto .informacion li i {
+    margin-right: 10px; /* Espacio entre icono y texto */
+    color: #1CB698; /* Color del icono */
+}
+
+.contacto .informacion li:hover {
+    color: #1CB698; /* Color al pasar el cursor */
+}
+
+/* Animaciones de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contacto h2,
+.contacto .col {
+    animation: fadeIn 0.6s ease forwards; /* Aplicar la animación */
+}
+
+.contacto h2 {
+    animation-delay: 0.2s; /* Retrasar la animación del título */
+}
+
+.contacto .col {
+    animation-delay: 0.4s; /* Retrasar la animación de las columnas */
+}
+
+
+/* Estilos Generales para el Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header .logo a {
+    color: #f0a500; /* Color de énfasis */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+header .logo a:hover {
+    background-color: #444;
+}
+
+nav#nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav#nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+nav#nav ul li a:hover {
+    color: #f0a500;
+    text-decoration: underline;
+}
+
+/* Responsive Navigation Icon */
+.nav-responsive {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #f0a500;
+}
+
+/* Estilos para Vista Móvil */
+@media (max-width: 768px) {
+    nav#nav {
+        display: none; /* Oculta la navegación en móviles */
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    .nav-responsive:hover {
+        color: #ffcc00;
+    }
+}
+
+/* Estilos generales del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header .logo a {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .logo a:hover {
+    color: #ffa500; /* Naranja para el hover */
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    margin: 0;
+}
+
+#nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+#nav ul li a:hover {
+    color: #ffa500; /* Naranja en hover */
+}
+
+.nav-responsive {
+    display: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos para la versión móvil */
+@media (max-width: 768px) {
+    #nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #222;
+        width: 100%;
+        padding: 1em;
+        gap: 1em;
+        border-top: 2px solid #ffa500;
+        animation: slideDown 0.5s ease forwards;
+    }
+
+    #nav ul li {
+        text-align: center;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+}
+
+/* Animación de apertura del menú */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+

@@ -1,0 +1,134 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-header {
+    background-color: #1CB698;
+    padding: 1em 0;
+    text-align: center;
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.proyectos-contenedor {
+    padding: 2em 1em;
+    padding-top: 5em;  /* Adding top padding to avoid overlap */
+}
+
+.proyectos-resumen {
+    background-color: #000000;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.contenido-principal {
+    background-color: #000000;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.galeria li {
+    flex: 1 1 calc(33.333% - 10px);
+    margin: 5px;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.ficha-tecnica, .descripcion-proyecto, .arquitectura-proyecto {
+    background-color: #333333;
+    color: #1CB698;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+}
+
+.ficha-tecnica ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ficha-tecnica li {
+    margin: 0.5em 0;
+}
+
+.btn-repo {
+    display: inline-block;
+    background-color: #222898;
+    color: #FFFFFF;
+    padding: 1em 2em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.btn-repo:hover {
+    background-color: #1CB698;
+    transform: scale(1.05);
+}
+
+.video-container {
+    margin-top: 2em;
+    text-align: center;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tituloProyecto {
+   text-align:  center;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .galeria li {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria li {
+        flex: 1 1 100%;
+    }
+
+    .btn-repo {
+        font-size: 0.9em;
+        padding: 0.8em 1.5em;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página no encontrada</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1b1b1b;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .error-container {
+            max-width: 500px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #2b2b2b;
+        }
+        h1 {
+            font-size: 72px;
+            color: #113494;
+            margin: 0;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 0;
+            color: #cccccc;
+        }
+        p {
+            color: #888888;
+            font-size: 16px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #1915a4;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #3029e7;
+        }
+    </style>
+    <script>
+        // Redirige automáticamente al home después de 5 segundos
+        setTimeout(() => {
+            window.location.href = "/";
+        }, 5000);
+    </script>
+</head>
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+        <h2>Página no encontrada</h2>
+        <p>Lo sentimos, la página que buscas no existe.</p>
+        <p>Serás redirigido al inicio en unos segundos.</p>
+        <a href="/" class="back-button">Volver al inicio ahora</a>
+    </div>
+</body>
+</html>

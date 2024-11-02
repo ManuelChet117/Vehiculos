@@ -1,0 +1,94 @@
+
+/* Estilos generales del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #000000; /* Fondo negro */
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el logo */
+header .logo {
+    background-color: #000000; /* Azul oscuro para el fondo del logo */
+    padding: 0.5em 1em; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+header .logo a {
+    color: #000000; /* Color del texto del logo */
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .logo a:hover {
+    color: #292ebc; /* Color azul claro para el hover */
+}
+
+#nav {
+    font-family: 'Press Start 2P', cursive; /* Aplica la fuente al nav */
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    margin: 0;
+}
+
+#nav ul li a {
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+
+
+.nav-responsive {
+    display: none;
+    font-size: 1.5em;
+    color: #fff; /* Color del ícono de menú */
+    cursor: pointer;
+}
+
+/* Estilos para la versión móvil */
+@media (max-width: 768px) {
+    #nav ul {
+        display: none; /* Ocultar el menú por defecto en móvil */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #222; /* Fondo del menú móvil */
+        width: 100%;
+        padding: 1em;
+        gap: 1em;
+        border-top: 2px solid #ffa500; /* Borde superior en naranja */
+        animation: slideDown 0.5s ease forwards; /* Animación al abrir */
+    }
+
+    #nav ul li {
+        text-align: center; /* Centrar texto en el menú móvil */
+    }
+
+    .nav-responsive {
+        display: block; /* Mostrar el ícono de menú en móvil */
+    }
+}
+
+/* Animación de apertura del menú */
+@keyframes slideDown {
+    from {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(-20px); /* Desplazado hacia arriba */
+    }
+    to {
+        opacity: 1; /* Se vuelve visible */
+        transform: translateY(0); /* Regresa a la posición original */
+    }
+}
